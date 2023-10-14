@@ -1,37 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Rolex Watches Website Readme
+Introduction
+Welcome to the Rolex Watches website! This is a brief guide to help you understand the technologies and features used in this website.
 
-## Getting Started
+Features
+1. Rolex Watches Collection
+Our website showcases a wide range of Rolex watches, featuring different models, styles, and prices. You can explore the collection, view product details, and find the perfect Rolex watch that suits your style and preferences.
 
-First, run the development server:
+2. Firebase Authentication
+To provide a seamless and secure shopping experience, we have integrated Firebase for user authentication. When you click on the checkout button, you will be prompted to sign up or log in using Firebase authentication. This ensures that your personal information and purchase history are protected.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Sanity CMS for Product Management
+We use Sanity CMS to manage and display our Rolex watch products. This allows us to easily update product information, add new items to the collection, and maintain a consistently high-quality presentation of our watches on the website.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. AOS for Scroll Animations
+To enhance the user experience and add an element of interactivity, we've incorporated the AOS (Animate On Scroll) library. This provides smooth and eye-catching scroll animations that make your journey through the website more engaging.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+5. Dark Mode and Light Mode Themes
+We offer two distinct themes for our website: dark mode and light mode. You can choose the theme that best suits your preference by clicking on the theme toggle button. Enjoy browsing our Rolex watches in a style that's comfortable for your eyes.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Rolex-website
+Getting Started
+To access the Rolex Watches website, simply visit our website URL. You can create an account using Firebase authentication during the checkout process. Explore our collection, toggle between dark and light themes, and enjoy the AOS scroll animations for a captivating shopping experience.

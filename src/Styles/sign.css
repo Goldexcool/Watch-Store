@@ -1,0 +1,223 @@
+.signup_ {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.signup_wrapper {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    column-gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    /* padding: 2rem; */
+    background-color: var(--container-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.home_bg {
+    background-color: var(--first-color);
+    width: 450px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_bg img {
+    object-fit: cover;
+    width: 360px;
+    height: 400px;
+}
+
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.header_signup {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.header_signup h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+.header_signup p {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--text-color);
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    margin-top: 1rem;
+}
+
+.email label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--text-color);
+}
+
+.email input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: var(--container-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    margin-top: 1rem;
+}
+
+.password label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.password input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: var(--container-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signupbtn {
+    margin-top: 2rem;
+}
+
+.signupbtn button {
+    width: 500px;
+    background-color: var(--first-color);
+    padding: 10px 20px;
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.signupbtn button:hover {
+    opacity: 1;
+}
+
+.google_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+.google_signup {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    padding: 5px;
+    border-radius: 70px;
+    cursor: pointer;
+    background-color: var(--container-color);
+    border: 1px solid black;
+}
+
+.google_signup i {
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.google_signup p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--text-color);
+}
+
+.acct_ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    /* margin-top: 1rem; */
+}
+
+.login {
+    font-size: 1rem;
+    font-weight: 200;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .home_bg {
+        display: none;
+    }
+
+    .signup_wrapper {
+        width: 100%;
+        padding: 2rem;
+    }
+    .header_signup p {
+        font-size: .7rem;
+    }
+
+    .email input {
+        width: 280px;
+    }
+
+    .password input {
+        width: 280px;
+
+    }
+
+    .signupbtn button {
+        width: 280px;
+
+    }
+
+    .google_signup {
+        width: 280px;
+
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .home_bg {
+        display: none;
+    }
+
+    .signup_wrapper{
+        width: 100%;
+        padding: 2rem;
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .nav__menu {
+        display: none;
+    }
+}

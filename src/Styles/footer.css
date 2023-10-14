@@ -1,0 +1,161 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    margin-top: 10rem;
+    color: var(--title-color);
+}
+
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    max-width: 100%;
+    width: 1000px;
+    /* padding: 0 1rem; */
+}
+
+.info_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.info_list p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.info_list ul {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.about_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.about_list p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.about_list ul {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.products_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.products_list p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.products_list ul {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.socials p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.social_icons {
+    display: flex;
+    column-gap: .5rem;
+}
+
+.socials i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.socials i:hover {
+    opacity: .8;
+}
+
+.name_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code_name {
+    font-size: 17px;
+    font-weight: 100;
+    margin-top: .5rem;
+}
+
+.hr_foot_name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.name_wrapper h1 {
+    color: var(--title-color);
+    margin-bottom: 2rem;
+}
+
+.hr_foot {
+    width: 1000px;
+    height: 2px;
+    justify-content: center;
+    max-width: 100%;
+    border: none;
+    background-color: var(--title-color);
+}
+
+/* #################### Scroll Up ###################*/
+.scrollup {
+    background-color: var(--first-color);
+    padding: 5px 8px;
+    border-radius: 5px;
+    position: fixed;
+    right: 1rem;
+    bottom: 30px;
+    box-shadow: 0 4px 12px hsla(0, 0%, 20%, 0.1);
+    cursor: pointer;
+    display: none;
+    transition: .5s;
+}
+  
+  .scrollup:hover {
+    opacity: 1;
+  }
+  
+  .scrollup__icon {
+    font-size: 1.5rem;
+    color: var(--first-color);
+  }
+
+/* Show Scroll Up*/
+.show-scroll {
+    bottom: 30px;
+    display: block;
+}
+
