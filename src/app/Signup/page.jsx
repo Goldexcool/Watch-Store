@@ -28,7 +28,8 @@ const Page = () => {
     });
 
     return () => unRegistered();
-  }, []);
+  }, [router]);
+
   const signUp = async (e) => {
     e.preventDefault();
     try {

@@ -45,9 +45,6 @@
     border: 1px solid var(--border-color);
 }
 
-.cart__img {
-    /* width: 50px; */
-}
 
 .cart__title {
     font-size: var(--normal-font-size);
