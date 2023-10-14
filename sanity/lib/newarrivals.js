@@ -2,7 +2,7 @@
 export default {
     name: "NewArrivals",
     title: "NewArrivals",
-    type: "document",
+    // type: "document",
     fields: [
       {
         name: "image01",
