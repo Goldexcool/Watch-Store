@@ -19,4 +19,4 @@ To enhance the user experience and add an element of interactivity, we've incorp
 We offer two distinct themes for our website: dark mode and light mode. You can choose the theme that best suits your preference by clicking on the theme toggle button. Enjoy browsing our Rolex watches in a style that's comfortable for your eyes.
 
 Getting Started
-To access the Rolex Watches website, simply visit our website URL. You can create an account using Firebase authentication during the checkout process. Explore our collection, toggle between dark and light themes, and enjoy the AOS scroll animations for a captivating shopping experience.
+To access the Rolex Watches website, simply visit our website URL. You can create an account using Firebase authentication during the checkout process. Explore our collection, toggle between dark and light themes, and enjoy the AOS scroll animations for a captivating shopping experience.# Rolex-main
