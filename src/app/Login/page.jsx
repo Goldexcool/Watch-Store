@@ -23,7 +23,7 @@ const Page = () => {
       console.log("user", user);
       setUser(user);
       if (user) {
-        router.push("/");
+        router.push("/home");
       }
     });
 
