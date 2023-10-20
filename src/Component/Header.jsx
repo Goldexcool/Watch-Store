@@ -56,10 +56,9 @@ const Header = () => {
     );
   };
   useEffect(() => {
-    const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
-    const getCurrentIcon = () =>
-      selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
-
+    // const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
+    // const getCurrentIcon = () =>
+    //   selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
     if (typeof window !== "undefined") {
       localStorage.setItem("selected-theme", getCurrentTheme());
       localStorage.setItem("selected-icon", getCurrentIcon());
