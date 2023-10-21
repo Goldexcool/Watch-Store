@@ -36,16 +36,16 @@ const Header = () => {
   const getCurrentIcon = () =>
     selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-        darkTheme
-      );
-      themeButton.current.classList[
-        selectedIcon === "bx bx-moon" ? "add" : "remove"
-      ](iconTheme);
-    }
-  }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+  //       darkTheme
+  //     );
+  //     themeButton.current.classList[
+  //       selectedIcon === "bx bx-moon" ? "add" : "remove"
+  //     ](iconTheme);
+  //   }
+  // }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
 
   const handleButtonClick = () => {
     setSelectedTheme((currentTheme) =>
@@ -56,9 +56,6 @@ const Header = () => {
     );
   };
   useEffect(() => {
-    // const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
-    // const getCurrentIcon = () =>
-    //   selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
     if (typeof window !== "undefined") {
       localStorage.setItem("selected-theme", getCurrentTheme());
       localStorage.setItem("selected-icon", getCurrentIcon());
@@ -128,35 +125,43 @@ const Header = () => {
 
       {/*################################### Hamburger Menu ############################*/}
       <div className="nav__menu" id="nav-menu" ref={navMenu}>
-            <ul className="nav__list">
-              <li className="nav__item" onClick={navToggle}>
-                <a href="#home" className="nav__link active-link">
-                  Home
-                </a>
-              </li>
-              <li className="nav__item" onClick={navToggle}>
-                <a href="#featured" className="nav__link">
-                  Featured
-                </a>
-              </li>
-              <li className="nav__item" onClick={navToggle}>
-                <a href="#products" className="nav__link">
-                  Products
-                </a>
-              </li>
-              <li className="nav__item" onClick={navToggle}>
-                <a href="#new" className="nav__link">
-                  New
-                </a>
-              </li>
-            </ul>
+        <ul className="nav__list">
+          <li className="nav__item" onClick={navToggle}>
+            <a href="#home" className="nav__link active-link">
+              Home
+            </a>
+          </li>
+          <li className="nav__item" onClick={navToggle}>
+            <a href="#featured" className="nav__link">
+              Featured
+            </a>
+          </li>
+          <li className="nav__item" onClick={navToggle}>
+            <a href="#products" className="nav__link">
+              Products
+            </a>
+          </li>
+          <li className="nav__item" onClick={navToggle}>
+            <a href="#new" className="nav__link">
+              New
+            </a>
+          </li>
+        </ul>
 
-            <div className="nav__close" id="nav-close" style={{cursor: "pointer"}}>
-              <i className="bx bx-x close_btn" style={{cursor: "pointer"}} onClick={navToggle}></i>
-            </div>
-          </div>
+        <div
+          className="nav__close"
+          id="nav-close"
+          style={{ cursor: "pointer" }}
+        >
+          <i
+            className="bx bx-x close_btn"
+            style={{ cursor: "pointer" }}
+            onClick={navToggle}
+          ></i>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Header;
