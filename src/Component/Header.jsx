@@ -4,6 +4,16 @@ import Image from "next/image";
 import "../Styles/navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { cartUiActions } from "../store/shopping-cart/cartUiSlice";
+import { useRouter } from "next/navigation";
+import { auth, googleProvider,githubProvider } from "../../Firebase/initFirebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithPopup,
+} from "firebase/auth";
+import initFirebase from '../../Firebase/initFirebase'
+import profile from '../img/3135715.png'
 
 const Header = () => {
   const header = useRef();
@@ -29,6 +39,8 @@ const Header = () => {
       : null
   );
 
+  
+
   const darkTheme = "dark-theme";
   const iconTheme = "bx-sun"; // Without specific icon class
 
@@ -36,16 +48,16 @@ const Header = () => {
   const getCurrentIcon = () =>
     selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-  //       darkTheme
-  //     );
-  //     themeButton.current.classList[
-  //       selectedIcon === "bx bx-moon" ? "add" : "remove"
-  //     ](iconTheme);
-  //   }
-  // }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+        darkTheme
+      );
+      themeButton.current.classList[
+        selectedIcon === "bx bx-moon" ? "add" : "remove"
+      ](iconTheme);
+    }
+  }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
 
   const handleButtonClick = () => {
     setSelectedTheme((currentTheme) =>

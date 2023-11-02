@@ -41,31 +41,11 @@ const Page = () => {
     }
   };
 
-  const signIn = async (e) => {
-    e.preventDefault();
-    try {
-      const userCredentials = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      const user = userCredentials.user;
-      if (user) {
-        alert("success");
-        setEmail("");
-        setPassword("");
-        router.push("/");
-      } else {
-        alert("failed");
-      }
-    } catch (err) {
-      alert(err);
-    }
-  };
+ 
   return (
     <div className="signup_">
       <div className="signup_wrapper">
-        <div className="home_bg">
+        <div className="C">
           <Image src={homeImg} alt="home" width={100} height={100} />
         </div>
         <div className="form_wrapper">
@@ -93,8 +73,6 @@ const Page = () => {
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   );

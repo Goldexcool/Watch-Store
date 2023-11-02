@@ -24,6 +24,13 @@ export default function Home() {
   const [arrivals, setNewArrivals] = useState([]);
 
   useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      offset: 200, // Offset (in pixels) from the top of the page
+    });
+  }, []);
+
+  useEffect(() => {
     const fetchFeatured = async () => {
       const query = `*[_type == "Featured" && category == "featured"]{
           _id,
@@ -96,14 +103,16 @@ export default function Home() {
     };
     fetchArrivals();
   }, []);
-  AOS.init({
-    duration: 2000, // Animation duration
-    offset: 200, // Offset (in pixels) from the top of the page
-  });
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 2000, // Animation duration
+  //     offset: 200, // Offset (in pixels) from the top of the page
+  //   });
+  // }, []);
 
-  useEffect(() => {
-    AOS.refresh();
-  }, []);
+  // useEffect(() => {
+  //   AOS.refresh();
+  // }, []);
 
   return (
     <main>
@@ -111,7 +120,7 @@ export default function Home() {
 
       <section className="home" id="home">
         <div className="home__container container grid">
-          <div className="home__img-bg" >
+          <div className="home__img-bg">
             <Image src={heroImg} alt="" className="home__img" />
           </div>
 
@@ -171,7 +180,7 @@ export default function Home() {
           {/* Featured cards from sanity */}
           <div className="fs_feat_wrapper" data-aos="zoom-in-right">
             {featured.map((item) => (
-              <ul className="fs_feat_wrapper" key={item._id} >
+              <ul className="fs_feat_wrapper" key={item._id}>
                 <Featured item={item} />
               </ul>
             ))}
@@ -207,10 +216,14 @@ export default function Home() {
             <hr className="hr_pro" />
             <h1>Products</h1>
           </div>
-          <div className="pr_crd" >
+          <div className="pr_crd">
             <ul className="product_cardwrapper">
               {products.map((item) => (
-                <ul className="product_cardwrapper" key={item._id} data-aos="zoom-out-left">
+                <ul
+                  className="product_cardwrapper"
+                  key={item._id}
+                  data-aos="zoom-out-left"
+                >
                   <Products item={item} />
                 </ul>
               ))}
@@ -298,7 +311,11 @@ export default function Home() {
       </section>
 
       {/* ########################## Subscription ############################## */}
-      <section className="subscribe_section" id="subscribe_section" data-aos="zoom-in">
+      <section
+        className="subscribe_section"
+        id="subscribe_section"
+        data-aos="zoom-in"
+      >
         <div className="sub_wrapper">
           <div className="sub_article">
             <h1>Subscribe Our Newsletter</h1>

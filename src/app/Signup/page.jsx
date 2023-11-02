@@ -4,15 +4,23 @@ import homeImg from "../../img/home.png";
 import "../../Styles/sign.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { auth, googleProvider,githubProvider } from "../../../Firebase/initFirebase";
+import {
+  auth,
+  googleProvider,
+  githubProvider,
+} from "../../../Firebase/initFirebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signInWithPopup,
 } from "firebase/auth";
+import initFirebase from "../../../Firebase/initFirebase";
+import profile from "../../img/3135715.png";
+import HomePage from "../page";
 
 const Page = () => {
+  initFirebase();
   const [popUp, setPopUp] = useState(false);
   const router = useRouter();
   const [user, setUser] = useState(null);
@@ -52,7 +60,27 @@ const Page = () => {
   };
   const logIn = () => {
     router.push("/Login");
-  }
+  };
+
+  // if (user) {
+  //   return (
+  //     <div>
+  //       {user.photoURL ? (
+  //         <Image
+  //           src={user?.photoURL}
+  //           width={100}
+  //           height={100}
+  //           alt="googleimage"
+  //         />
+  //       ) : (
+  //         <div className="homepage">
+  //           <Image src={profile} alt="" width={40} height={40} />
+  //           <HomePage />
+  //         </div>
+  //       )}
+  //     </div>
+  //   );
+  // }
   return (
     <div className="signup_">
       <div className="signup_wrapper">
@@ -66,11 +94,19 @@ const Page = () => {
             <form>
               <div className="email">
                 <label>Email</label>
-                <input type="email" placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)} />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
               <div className="password">
                 <label>Password</label>
-                <input type="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)}/>
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </div>
             </form>
             <div className="signupbtn">
@@ -85,9 +121,14 @@ const Page = () => {
           </div>
           <div className="acct_">
             <div className="acct_wrap">
-          <p>Already have an account? <span className="login" onClick={logIn}>Login</span></p>
+              <p>
+                Already have an account?{" "}
+                <span className="login" onClick={logIn}>
+                  Login
+                </span>
+              </p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

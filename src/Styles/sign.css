@@ -167,6 +167,11 @@
     text-decoration: underline;
     cursor: pointer;
 }
+.homepage img{
+    margin-right: 200px;
+    margin-top: .8rem;
+    float: right;
+}
 
 @media (max-width: 480px) {
     .home_bg {
