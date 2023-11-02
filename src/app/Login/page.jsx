@@ -45,7 +45,7 @@ const Page = () => {
   return (
     <div className="signup_">
       <div className="signup_wrapper">
-        <div className="C">
+        <div className="home_bg">
           <Image src={homeImg} alt="home" width={100} height={100} />
         </div>
         <div className="form_wrapper">
