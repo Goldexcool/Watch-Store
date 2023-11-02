@@ -29,7 +29,7 @@ const Page = () => {
 
     return () => unRegistered();
   }, [router]);
-  const signUp = async (e) => {
+  const signIn = async (e) => {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
