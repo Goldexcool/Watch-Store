@@ -174,13 +174,14 @@
 }
 
 @media (max-width: 480px) {
-    .home_bg {
-        display: none;
+    .signup_{
+        flex-direction: column;
+        margin-top: 2rem;
     }
-
     .signup_wrapper {
         width: 100%;
         padding: 2rem;
+        flex-direction: column;
     }
     .header_signup p {
         font-size: .7rem;
@@ -204,20 +205,125 @@
         width: 280px;
 
     }
+    .footer{
+        display: none;
+    }
 
     .navbar {
         display: none;
     }
+    .home_bg {
+        width: 300px;
+        height: 400px;
+    }
+    .hr_foot_name{
+        display: none;
+    }
+    .name_wrapper{
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+    .signup_{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .signup_wrapper {
+        width: 100%;
+        padding: 2rem;
+        flex-direction: column;
+    }
+    .header_signup p {
+        font-size: .7rem;
+    }
+
+    .email input {
+        width: 100%;
+    }
+
+    .password input {
+        width: 280px;
+
+    }
+
+    .signupbtn button {
+        width: 280px;
+
+    }
+
+    .google_signup {
+        width: 280px;
+
+    }
+    .navbar {
+        display: none;
+    }
+    .home_bg {
+        width: 300px;
+        height: 400px;
+    }
+    .footer{
+        display: none;
+    }
+    .hr_foot_name{
+        display: none;
+    }
+    .name_wrapper{
+        display: none;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 900px) {
+    .signup_{
+        margin: 0 auto;
+        /* flex-direction: column; */
+        margin-top: 4rem;
+    }
+    .signup_wrapper {
+        width: 100%;
+        padding: 2rem;
+        /* flex-direction: column; */
+    }
+    .header_signup p {
+        font-size: .7rem;
+    }
+
+    .email input {
+        width: 280px;
+    }
+
+    .password input {
+        width: 280px;
+
+    }
+
+    .signupbtn button {
+        width: 280px;
+
+    }
+
+    .google_signup {
+        width: 280px;
+
+    }
+    .home_bg {
+        width: 300px;
+        height: 400px;
+    }
+    .footer{
+        display: block;
+    }
+    
 }
 
 @media (max-width: 900px) {
-    .home_bg {
-        display: none;
-    }
-
     .signup_wrapper{
         width: 100%;
-        padding: 2rem;
+        /* padding: 2rem; */
+    }
+    .footer{
+        display: block;
     }
 
 }

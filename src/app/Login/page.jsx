@@ -63,7 +63,7 @@ const Page = () => {
               </div>
             </form>
             <div className="signupbtn">
-              <button onClick={signIn}>Sign IN</button>
+              <button onClick={signIn}>Sign In</button>
             </div>
             <div className="google_wrap">
               <div className="google_signup">

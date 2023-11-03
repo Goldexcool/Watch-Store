@@ -15,20 +15,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export default function Home() {
   const [featured, setFeatured] = useState([]);
   const [products, setproducts] = useState([]);
   const [arrivals, setNewArrivals] = useState([]);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // Animation duration
-      offset: 200, // Offset (in pixels) from the top of the page
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 2000, // Animation duration
+  //     offset: 200, // Offset (in pixels) from the top of the page
+  //   });
+  // }, []);
 
   useEffect(() => {
     const fetchFeatured = async () => {
@@ -117,7 +117,6 @@ export default function Home() {
   return (
     <main>
       {/* ################################# Hero Section #########################################3 */}
-
       <section className="home" id="home">
         <div className="home__container container grid">
           <div className="home__img-bg">

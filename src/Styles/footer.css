@@ -159,3 +159,11 @@
     display: block;
 }
 
+@media (max-width: 480px) {
+    .footer_wrapper{
+        flex-direction: column;
+        row-gap: 2rem;
+        padding: 10px;
+    }
+}
+
