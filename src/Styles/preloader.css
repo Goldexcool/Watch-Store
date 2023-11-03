@@ -1,0 +1,78 @@
+/* Preloader.css */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(31, 100%, 70%); /* Your color theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .loader {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .spinner {
+    width: 100%;
+    height: 100%;
+    border: 6px solid transparent;
+    border-top: 6px solid hsl(60, 100%, 100%); /* Your color theme */
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  .outer {
+    animation: spinOuter 4s linear infinite;
+  }
+  
+  middle {
+    animation: spinMiddle 3s linear infinite;
+  }
+  
+  .inner {
+    animation: spinInner 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinOuter {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinMiddle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes spinInner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
