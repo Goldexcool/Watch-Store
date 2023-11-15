@@ -23,7 +23,7 @@ const Page = () => {
       console.log("user", user);
       setUser(user);
       if (user) {
-        router.push("/home");
+        router.push("/");
       }
     });
 
@@ -42,6 +42,7 @@ const Page = () => {
   };
 
  
+  
   return (
     <div className="signup_">
       <div className="signup_wrapper">

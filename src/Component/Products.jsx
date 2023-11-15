@@ -24,7 +24,7 @@ const Products = (props) => {
   };
 
   return (
-    <ul className="product_cardwrapper">
+    <ul className="product_cardwrapper"t5>
       <li className="product_card">
         <Image src={image01.url} width={100} height={150} alt="" />
         <p>{title}</p>

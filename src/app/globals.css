@@ -12,6 +12,7 @@
   --container-color: #fff;
   --border-color: hsl(0, 0%, 94%);
   --white: #fff;
+  --iconcolor: hsl(0, 0%, 21%);
 }
 
 * {
@@ -35,10 +36,12 @@ span{
 ::-webkit-scrollbar {
   width: 0.6rem;
   background: hsl(0, 0%, 74%);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: hsl(0, 0%, 17%);
+  border-radius: 10px;
 }
 
 /* ########## Dark Theme ########## */
@@ -52,6 +55,7 @@ body.dark-theme {
   --container-color: hsl(0, 0%, 16%);
   --border-color: hsl(0, 0%, 20%);
   --white: #fff;
+  --iconcolor: hsl(0, 0%, 0%);
   
 }
 html{

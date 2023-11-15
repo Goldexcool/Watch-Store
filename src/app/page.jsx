@@ -23,23 +23,23 @@ export default function Home() {
   const [featured, setFeatured] = useState([]);
   const [products, setproducts] = useState([]);
   const [arrivals, setNewArrivals] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // Animation duration
-      offset: 200, // Offset (in pixels) from the top of the page
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000, // Animation duration
+  //     offset: 100, // Offset (in pixels) from the top of the page
+  //   });
+  // }, []);
 
-  useEffect(() => {
-    // Simulate loading (replace with your own loading logic)
-    setLoading(true);
-    // Replace this setTimeout with your actual data loading logic
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   // Simulate loading (replace with your own loading logic)
+  //   setLoading(true);
+  //   // Replace this setTimeout with your actual data loading logic
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3000);
+  // }, []);
 
   useEffect(() => {
     const fetchFeatured = async () => {
@@ -114,21 +114,21 @@ export default function Home() {
     };
     fetchArrivals();
   }, []);
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 2000, // Animation duration
-  //     offset: 200, // Offset (in pixels) from the top of the page
-  //   });
-  // }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      offset: 200, // Offset (in pixels) from the top of the page
+    });
+  }, []);
 
-  // useEffect(() => {
-  //   AOS.refresh();
-  // }, []);
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
 
   return (
     
     <main>
-      {loading && <Preloader/>}
+      {/* {loading && <Preloader/>} */}
       {/* ################################# Hero Section #########################################3 */}
       <section className="home" id="home">
         <div className="home__container container grid">
